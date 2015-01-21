@@ -10,7 +10,7 @@ RUN apt-get update && \
 
 WORKDIR /app
 
-ENV KIBANA_VERSION 4.0.0-BETA2
+ENV KIBANA_VERSION 4.0.0-beta3
 
 RUN cd /tmp && \
     wget -q https://download.elasticsearch.org/kibana/kibana/kibana-${KIBANA_VERSION}.tar.gz && \
