@@ -1,0 +1,10 @@
+#!/bin/sh
+
+## simply cat all remote files to stdout
+for src in $*
+do
+  /usr/bin/curl -sL \
+    -H "Authorization: token $TOKEN" \
+    -H 'Accept: application/vnd.github.v3.raw' \
+    "https://api.github.com/repos/${REPO}/contents/${src}"
+done

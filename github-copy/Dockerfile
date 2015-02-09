@@ -4,7 +4,9 @@ MAINTAINER Ric Lister, rlister@gmail.com
 
 WORKDIR /app
 
-ADD ghcp.sh /app/
-RUN chmod 0755 ghcp.sh
+ADD ghcp /app/
+RUN chmod 0755 ghcp
+ADD ghcat /app/
+RUN chmod 0755 ghcat
 
-ENTRYPOINT [ "/app/ghcp.sh" ]
+ENTRYPOINT [ "/app/ghcp" ]
