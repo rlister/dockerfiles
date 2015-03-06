@@ -1,21 +1,18 @@
 FROM debian:jessie
-
-MAINTAINER Ric Lister, rlister@gmail.com
+MAINTAINER Ric Lister <rlister@gmail.com>
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -yq nginx && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* && \
+    echo "\ndaemon off;" >> /etc/nginx/nginx.conf && \
+    chown -R www-data:www-data /var/lib/nginx
 
-## clean up unwanted configs
-RUN rm /etc/nginx/sites-enabled/default
+VOLUME [ "/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html" ]
 
-## run in foreground
-RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+WORKDIR /etc/nginx
 
-## log to stdout
-RUN ln -sf /dev/stdout /var/log/nginx/access.log
-RUN ln -sf /dev/stderr /var/log/nginx/error.log
+EXPOSE 80
+EXPOSE 443
 
-EXPOSE 80 443
 CMD [ "nginx" ]
