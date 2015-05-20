@@ -19,7 +19,7 @@ the linked `/etc/hosts` entry):
 
 ```
 docker run -d --name elasticsearch dockerfile/elasticsearch
-docker run -d --name kibana4 --link elasticsearch:elasticsearch -e ELASTICSEARCH=http://elasticsearch:9200 -p 5601:5601 rlister/kibana4
+docker run -d --name kibana4 --link elasticsearch:elasticsearch -e ELASTICSEARCH_URL=http://elasticsearch:9200 -p 5601:5601 rlister/kibana4
 ```
 
 You should now be able to use your dashboard at
