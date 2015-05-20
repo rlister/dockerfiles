@@ -9,10 +9,11 @@ RUN apt-get update && \
     zlib1g-dev \
     libssl-dev \
     libreadline6-dev \
-    libyaml-dev
+    libyaml-dev \
+    libffi-dev
 
-ENV RUBY_MAJOR_VERSION 2.0
-ENV RUBY_VERSION 2.0.0-p645
+ENV RUBY_MAJOR_VERSION 2.2
+ENV RUBY_VERSION 2.2.2
 
 ADD http://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR_VERSION}/ruby-${RUBY_VERSION}.tar.gz /tmp/
 
