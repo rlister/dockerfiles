@@ -3,6 +3,11 @@
 About as simple as it gets, nginx installed on debian:jessie. Use this
 if your app is based on debian:jessie also, so they can share base.
 
+## Versions
+
+- `latest`: installs latest debian.org package
+- `stable`: installs `stable` package from nginx.org; this will generally be newer
+
 ## Usage
 
 ```
@@ -11,5 +16,5 @@ docker run -d --name nginx \
   -v /var/www/html:/var/www/html \
   -v /var/log/nginx:/var/log/nginx \
   -p 80:80 -p 443:443 \
-  rlister/nginx
+  rlister/nginx:stable
 ```
