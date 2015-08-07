@@ -9,7 +9,7 @@ RUN (wget -O - http://www.magicermine.com/demos/curl/curl/curl-${CURL_VERSION}.e
     && rm -rf /curl-${CURL_VERSION}.ermine
 
 ## install riemann
-ENV RIEMANN_VERSION 0.2.9
+ENV RIEMANN_VERSION 0.2.10
 RUN curl -skL https://aphyr.com/riemann/riemann-${RIEMANN_VERSION}.tar.bz2 | bunzip2 | tar -x && \
     mv /riemann-${RIEMANN_VERSION} /app
 
