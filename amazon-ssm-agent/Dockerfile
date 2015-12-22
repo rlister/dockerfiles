@@ -5,6 +5,7 @@ MAINTAINER Ric Lister <rlister@gmail.com>
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -yq \
+    lsb-release \
     curl
 
 ENV AGENT_URL https://amazon-ssm-us-east-1.s3.amazonaws.com/latest/debian_amd64/amazon-ssm-agent.deb
