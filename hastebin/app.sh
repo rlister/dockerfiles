@@ -34,4 +34,4 @@ cat > config.js <<EOF
 EOF
 
 ## run the server
-exec /usr/bin/nodejs ./server.js
+exec /usr/local/bin/node ./server.js
