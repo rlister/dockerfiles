@@ -1,12 +1,11 @@
-FROM debian:jessie
+FROM node:5.4
 
 MAINTAINER Ric Lister, rlister@gmail.com
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update && \
     apt-get install -yq \
-    git \
-    nodejs npm
+    git
 
 RUN git clone https://github.com/seejohnrun/haste-server.git /app
 WORKDIR /app
