@@ -7,7 +7,8 @@ RUN DEBIAN_FRONTEND=noninteractive \
     apt-get install -y \
     ca-certificates
 
-RUN gem install --no-rdoc --no-ri riemann-dash thin fog
+RUN gem install --no-rdoc --no-ri riemann-dash thin 
+RUN gem install --no-rdoc --no-ri fog -v 1.19.0
 
 WORKDIR /app
 
