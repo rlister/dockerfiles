@@ -7,4 +7,4 @@ RUN apk add --update nodejs && \
 
 EXPOSE 9200
 
-CMD [ "aws-es-kibana" ]
+ENTRYPOINT [ "aws-es-kibana" ]
