@@ -9,3 +9,9 @@ based on
 Runs a simple HTTP proxy on `localhost:9200` that handles
 request-signing for an IAM user or instance role that has access to an
 [AWS Elasticsearch](https://aws.amazon.com/elasticsearch-service/) domain.
+
+## Usage
+
+```
+docker run -p 9200:9200 rlister/aws-es-kibana <your_es_endpoint>
+```
