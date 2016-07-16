@@ -1,4 +1,4 @@
-FROM node:5.4
+FROM node:6
 
 MAINTAINER Ric Lister, rlister@gmail.com
 
