@@ -15,4 +15,4 @@ RUN curl ${AGENT_URL} -o amazon-ssm-agent.deb && \
     rm -f amazon-ssm-agent.deb
 
 WORKDIR /opt/amazon/ssm/
-CMD ["./amazon-ssm-agent"]
+CMD ["amazon-ssm-agent", "start"]
