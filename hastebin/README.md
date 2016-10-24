@@ -11,6 +11,8 @@ See `app.sh` for variable names.
 
 ## Example use
 
+> `STORAGE_TYPE` is set to `file` by default so you can quickly be up and running!
+
 Writing pastes to a mounted local volume:
 
 ```
