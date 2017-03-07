@@ -14,7 +14,7 @@ See `app.sh` for variable names.
 Writing pastes to a mounted local volume:
 
 ```
-docker run --name hastebin -d -p 7777:7777 -e STORAGE_TYPE=file -e /data:/app/data rlister/hastebin
+docker run --name hastebin -d -p 7777:7777 -e STORAGE_TYPE=file -v /data:/app/data rlister/hastebin
 ```
 
 Writing pastes to redis:
