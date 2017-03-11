@@ -5,8 +5,9 @@ MAINTAINER rlister@gmail.com
 ENV LS_VERSION 2.3.1
 
 ## install logstash and its dependencies
-RUN apk add --update bash openjdk7-jre-base openssl curl ca-certificates && \
-    cd /tmp &&  \
+RUN apk -U upgrade && \
+    apk add -U bash openjdk8-jre-base openssl curl ca-certificates && \
+    cd /tmp && \
     wget -q http://download.elastic.co/logstash/logstash/logstash-${LS_VERSION}.tar.gz && \
     mkdir -p /app && \
     tar zxf /tmp/logstash-${LS_VERSION}.tar.gz -C /app/ && \
