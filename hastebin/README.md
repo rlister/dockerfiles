@@ -23,5 +23,5 @@ Writing pastes to redis:
 
 ```
 docker run --name redis -d redis
-docker run --name hastebin -d -p 7777:7777 --link redis:redis -e STORAGE_HOST=redis rlister/hastebin
+docker run --name hastebin -d -p 7777:7777 --link redis:redis -e STORAGE_TYPE=redis -e STORAGE_HOST=redis rlister/hastebin
 ```
