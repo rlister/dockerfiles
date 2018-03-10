@@ -1,11 +1,9 @@
-FROM node:6
+FROM node:6-alpine
 
 MAINTAINER Ric Lister, rlister@gmail.com
 
-RUN DEBIAN_FRONTEND=noninteractive \
-    apt-get update && \
-    apt-get install -yq \
-    git
+RUN apk -U upgrade \
+    && apk add git
 
 RUN git clone https://github.com/seejohnrun/haste-server.git /app
 WORKDIR /app
