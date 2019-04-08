@@ -50,5 +50,5 @@ services:
     image: redis
     volumes:
       - ./data:/data
-entrypoint: redis-server --appendonly yes
+    entrypoint: redis-server --appendonly yes
 ```
